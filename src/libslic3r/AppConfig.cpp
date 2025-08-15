@@ -255,19 +255,19 @@ void AppConfig::set_defaults()
         set_bool("3mf_include_gcode", true);*/
 
     if (get("developer_mode").empty())
-        set_bool("developer_mode", false);
+        set_bool("developer_mode", true);
 
     if (get("enable_ssl_for_mqtt").empty())
-        set_bool("enable_ssl_for_mqtt", true);
+        set_bool("enable_ssl_for_mqtt", false);
 
     if (get("enable_ssl_for_ftp").empty())
-        set_bool("enable_ssl_for_ftp", true);
+        set_bool("enable_ssl_for_ftp", false);
 
     if (get("severity_level").empty())
-        set("severity_level", "info");
+        set("severity_level", "trace");
 
     if (get("internal_developer_mode").empty())
-        set_bool("internal_developer_mode", false);
+        set_bool("internal_developer_mode", true);
 
     // BBS
     if (get("preset_folder").empty())
